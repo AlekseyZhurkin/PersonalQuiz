@@ -14,7 +14,6 @@ final class ResultViewController: UIViewController {
     
     // MARK: - Public Properties
     var answers: [Answer]!
-    
 
     // MARK: - Overrides Methods
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ final class ResultViewController: UIViewController {
         
         let sortedAnimals = summary.sorted { $0.value > $1.value }
         guard let topAnimal = sortedAnimals.first?.key else { return }
+        
         updateUI(for: topAnimal)
     }
     
